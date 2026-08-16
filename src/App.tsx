@@ -9,6 +9,7 @@ import { Contact } from "@/components/site/contact";
 import { Footer } from "@/components/site/footer";
 import { MobileBookingBar } from "@/components/site/mobile-bar";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 // One-page site — every nav link is just an anchor (#chambres, #contact...)
 // scrolling to a section below, so there's no need for react-router here.
@@ -36,6 +37,9 @@ function App() {
 
       {/* Toasts for the booking dialog confirmation message */}
       <Toaster position="top-center" />
+      
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
