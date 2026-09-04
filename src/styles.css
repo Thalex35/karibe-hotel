@@ -154,12 +154,56 @@
     border-color: var(--color-border);
   }
 
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
+    margin: 0;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "liga" 1;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+
+  input[type="date"],
+  select {
+    appearance: none;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1) brightness(1.4);
+    opacity: 0.8;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--gold) 75%, transparent);
+    color: var(--ink);
   }
 
   h1,
@@ -169,10 +213,6 @@
     font-family: var(--font-display);
     font-weight: 300;
     letter-spacing: -0.01em;
-  }
-
-  html {
-    scroll-behavior: smooth;
   }
 }
 

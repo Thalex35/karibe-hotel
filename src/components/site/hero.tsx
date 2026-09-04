@@ -6,7 +6,7 @@ import heroImg from "@/assets/hero.jpg";
 import { BookingDialog } from "./booking-dialog";
 
 const FIELD =
-  "mt-2 h-11 w-full rounded-none border border-ivory/25 bg-transparent px-3 text-sm text-ivory outline-none focus:border-accent [color-scheme:dark]";
+  "mt-2 h-11 w-full rounded-none border border-ivory/25 bg-ivory/5 px-3 text-sm text-ivory shadow-inner shadow-black/10 outline-none transition-colors duration-200 placeholder:text-ivory/40 focus:border-gold focus:ring-1 focus:ring-accent [color-scheme:dark]";
 
 export function Hero() {
   return (
